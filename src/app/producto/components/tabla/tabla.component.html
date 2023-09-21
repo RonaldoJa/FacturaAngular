@@ -1,0 +1,45 @@
+<div class="container mt-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Código</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Total</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productos">
+          <td>{{ producto.codigo }}</td>
+          <td>{{ producto.descripcion }}</td>
+          <td>{{ producto.cantidad }}</td>
+          <td>{{ producto.precio | currency }}</td>
+          <td>{{ producto.cantidad * producto.precio | currency }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="eliminarProducto(producto)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <div class="d-flex align-items-center gap-2">
+          <button type="button" class="btn btn-danger" (click)="openModal()">
+            + NUEVA FILA
+          </button>
+        </div>
+      </div>
+      <div class="col-md-3 col-12 text-md-end">
+        <strong>Total:</strong>
+      </div>
+      <div class="col-md-1 col-12 text-md-end">
+        <h3>{{ calcularTotal() | currency }}</h3>
+      </div>
+    </div>
+  </div>
+  
+

@@ -1,0 +1,8 @@
+.custom-table {
+    border-collapse: collapse; /* Para eliminar el espacio entre celdas */
+    width: 100%;
+    border-top: 2px solid #2e8a82; /* Borde negro de 2 píxeles en la parte superior */
+    border-bottom: 2px solid #2e8a82; /* Borde negro de 2 píxeles en la parte inferior */
+    border-left: 2px solid #2e8a82 ;
+    border-right: 2px solid #2e8a82 ;
+}
