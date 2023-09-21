@@ -36,7 +36,7 @@ export class ModalComponent implements OnInit{
     } else {
       // El formulario no es válido, puedes mostrar un mensaje de error si deseas
       // Por ejemplo:
-      console.error('El formulario no es válido. Por favor, complete todos los campos correctamente.');
+      alert('El formulario no es válido. Por favor, complete todos los campos correctamente.');
     }
   }
 
